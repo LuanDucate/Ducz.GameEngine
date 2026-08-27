@@ -1,0 +1,271 @@
+{
+  "name": "Plaza 16x16",
+  "category": "Streets",
+  "description": "Paved square with a planter, fountain and benches.",
+  "materials": {
+    "calcada": {
+      "albedo": "#a8a49b",
+      "specular": 0.05,
+      "checkerboard": {
+        "colorA": "#adaaa1",
+        "colorB": "#9d9a92",
+        "cells": 2
+      },
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    },
+    "grama": {
+      "albedo": "#6d8a4a",
+      "specular": 0.03,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    },
+    "concreto": {
+      "albedo": "#9a9691",
+      "specular": 0.08,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    },
+    "madeira": {
+      "albedo": "#6d4c31",
+      "specular": 0.12,
+      "shininess": 16,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    },
+    "metal_escuro": {
+      "albedo": "#40454a",
+      "specular": 0.5,
+      "shininess": 48
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Plaza 16x16",
+    "children": [
+      {
+        "type": "static",
+        "name": "Piso",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            16.0,
+            0.28,
+            16.0
+          ]
+        },
+        "material": "calcada",
+        "position": [
+          0.0,
+          0.14,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Canteiro",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            6.0,
+            0.3,
+            6.0
+          ]
+        },
+        "material": "grama",
+        "position": [
+          0.0,
+          0.3,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Fonte",
+        "mesh": {
+          "primitive": "tube",
+          "size": [
+            0.0,
+            0.9,
+            0.3
+          ],
+          "radius": 1.6,
+          "segments": 20
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          0.45,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Banco_0",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.8,
+            0.12,
+            0.5
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          -6.0,
+          0.75,
+          -6.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Banco_Pe_0",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.6,
+            0.5,
+            0.12
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          -6.0,
+          0.45,
+          -6.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Banco_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.8,
+            0.12,
+            0.5
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          6.0,
+          0.75,
+          -6.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Banco_Pe_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.6,
+            0.5,
+            0.12
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          6.0,
+          0.45,
+          -6.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Banco_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.8,
+            0.12,
+            0.5
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          -6.0,
+          0.75,
+          6.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Banco_Pe_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.6,
+            0.5,
+            0.12
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          -6.0,
+          0.45,
+          6.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Banco_3",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.8,
+            0.12,
+            0.5
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          6.0,
+          0.75,
+          6.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Banco_Pe_3",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.6,
+            0.5,
+            0.12
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          6.0,
+          0.45,
+          6.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

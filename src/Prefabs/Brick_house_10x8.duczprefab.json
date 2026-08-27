@@ -1,0 +1,392 @@
+{
+  "name": "Brick house 10x8",
+  "category": "Houses",
+  "description": "Bigger brick house, two floors.",
+  "materials": {
+    "concreto": {
+      "albedo": "#9a9691",
+      "specular": 0.08,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    },
+    "tijolo": {
+      "albedo": "#9c5842",
+      "specular": 0.05,
+      "checkerboard": {
+        "colorA": "#a05a44",
+        "colorB": "#8d4f3c",
+        "cells": 8
+      },
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    },
+    "porta": {
+      "albedo": "#59422c",
+      "specular": 0.2,
+      "shininess": 24
+    },
+    "vidro": {
+      "albedo": "#9fd0e8aa",
+      "transparent": true,
+      "specular": 0.9,
+      "shininess": 128
+    },
+    "telha": {
+      "albedo": "#8f4a35",
+      "specular": 0.12,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Brick house 10x8",
+    "children": [
+      {
+        "type": "static",
+        "name": "Base",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.4,
+            0.3,
+            8.4
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          0.15,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Parede_N",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.0,
+            6.0,
+            0.25
+          ]
+        },
+        "material": "tijolo",
+        "position": [
+          0.0,
+          3.3,
+          -4.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Parede_S",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.0,
+            6.0,
+            0.25
+          ]
+        },
+        "material": "tijolo",
+        "position": [
+          0.0,
+          3.3,
+          4.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Parede_O",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.25,
+            6.0,
+            8.0
+          ]
+        },
+        "material": "tijolo",
+        "position": [
+          -5.0,
+          3.3,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Parede_L",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.25,
+            6.0,
+            8.0
+          ]
+        },
+        "material": "tijolo",
+        "position": [
+          5.0,
+          3.3,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Porta",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.0,
+            2.1,
+            0.1
+          ]
+        },
+        "material": "porta",
+        "position": [
+          0.0,
+          1.35,
+          4.02
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_S_0_-2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.1,
+            1.2,
+            0.08
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          -2.5,
+          1.9,
+          4.02
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_N_0_-2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.1,
+            1.2,
+            0.08
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          -2.5,
+          1.9,
+          -4.02
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_S_0_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.1,
+            1.2,
+            0.08
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          2.5,
+          1.9,
+          4.02
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_N_0_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.1,
+            1.2,
+            0.08
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          2.5,
+          1.9,
+          -4.02
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_L_0",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.08,
+            1.2,
+            1.3
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          5.02,
+          1.9,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_S_1_-2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.1,
+            1.2,
+            0.08
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          -2.5,
+          4.9,
+          4.02
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_N_1_-2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.1,
+            1.2,
+            0.08
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          -2.5,
+          4.9,
+          -4.02
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_S_1_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.1,
+            1.2,
+            0.08
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          2.5,
+          4.9,
+          4.02
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_N_1_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.1,
+            1.2,
+            0.08
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          2.5,
+          4.9,
+          -4.02
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_L_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.08,
+            1.2,
+            1.3
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          5.02,
+          4.9,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Telhado",
+        "mesh": {
+          "primitive": "roofGable",
+          "size": [
+            10.8,
+            2.8,
+            8.8
+          ],
+          "overhang": 0.45
+        },
+        "material": "telha",
+        "position": [
+          0.0,
+          7.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "pointLight",
+        "name": "Luz_Interna",
+        "position": [
+          0.0,
+          5.7,
+          0.0
+        ],
+        "color": "#ffdba0",
+        "energy": 1.0,
+        "range": 8
+      }
+    ]
+  }
+}

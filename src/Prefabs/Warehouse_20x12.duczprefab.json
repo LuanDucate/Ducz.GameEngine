@@ -1,0 +1,194 @@
+{
+  "name": "Warehouse 20x12",
+  "category": "Buildings",
+  "description": "Warehouse with a roller door - good for industrial areas.",
+  "materials": {
+    "concreto": {
+      "albedo": "#9a9691",
+      "specular": 0.08,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    },
+    "metal": {
+      "albedo": "#8b9096",
+      "specular": 0.6,
+      "shininess": 64
+    },
+    "metal_escuro": {
+      "albedo": "#40454a",
+      "specular": 0.5,
+      "shininess": 48
+    },
+    "telha_cinza": {
+      "albedo": "#585c60",
+      "specular": 0.14,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Warehouse 20x12",
+    "children": [
+      {
+        "type": "static",
+        "name": "Piso",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            20.0,
+            0.3,
+            12.0
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          0.15,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Parede_N",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            20.0,
+            6.0,
+            0.25
+          ]
+        },
+        "material": "metal",
+        "position": [
+          0.0,
+          3.3,
+          -6.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Parede_O",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.25,
+            6.0,
+            12.0
+          ]
+        },
+        "material": "metal",
+        "position": [
+          -10.0,
+          3.3,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Parede_L",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.25,
+            6.0,
+            12.0
+          ]
+        },
+        "material": "metal",
+        "position": [
+          10.0,
+          3.3,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Parede_S_A",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            7.0,
+            6.0,
+            0.25
+          ]
+        },
+        "material": "metal",
+        "position": [
+          -6.5,
+          3.3,
+          6.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Parede_S_B",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            7.0,
+            6.0,
+            0.25
+          ]
+        },
+        "material": "metal",
+        "position": [
+          6.5,
+          3.3,
+          6.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Portao",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            6.0,
+            4.8,
+            0.18
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          0.0,
+          2.4,
+          6.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Telhado",
+        "mesh": {
+          "primitive": "roofGable",
+          "size": [
+            20.8,
+            2.4,
+            12.8
+          ],
+          "overhang": 0.5
+        },
+        "material": "telha_cinza",
+        "position": [
+          0.0,
+          7.2,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

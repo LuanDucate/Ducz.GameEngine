@@ -1,0 +1,104 @@
+{
+  "name": "Park bench",
+  "category": "Urban",
+  "description": "Bench with metal legs.",
+  "materials": {
+    "madeira": {
+      "albedo": "#6d4c31",
+      "specular": 0.12,
+      "shininess": 16,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    },
+    "metal_escuro": {
+      "albedo": "#40454a",
+      "specular": 0.5,
+      "shininess": 48
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Park bench",
+    "children": [
+      {
+        "type": "static",
+        "name": "Assento",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.8,
+            0.1,
+            0.5
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          0.0,
+          0.45,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Encosto",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.8,
+            0.5,
+            0.08
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          0.0,
+          0.75,
+          -0.22
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Pe_O",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.08,
+            0.45,
+            0.5
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          -0.75,
+          0.22,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Pe_L",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.08,
+            0.45,
+            0.5
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          0.75,
+          0.22,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

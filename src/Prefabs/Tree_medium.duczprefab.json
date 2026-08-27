@@ -1,0 +1,109 @@
+{
+  "name": "Medium tree",
+  "category": "Nature",
+  "description": "3 m trunk with a round canopy.",
+  "materials": {
+    "tronco": {
+      "albedo": "#5b4632",
+      "specular": 0.05,
+      "uvScale": [
+        1,
+        1
+      ]
+    },
+    "folha": {
+      "albedo": "#4a7a3a",
+      "specular": 0.05
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Medium tree",
+    "children": [
+      {
+        "type": "static",
+        "name": "Tronco",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            3.0,
+            0.0
+          ],
+          "radius": 0.22,
+          "sides": 8
+        },
+        "material": "tronco",
+        "position": [
+          0.0,
+          1.5,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_1",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.672,
+            0.0
+          ],
+          "radius": 1.9,
+          "sides": 10
+        },
+        "material": "folha",
+        "position": [
+          0.0,
+          3.285,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_2",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.52,
+            0.0
+          ],
+          "radius": 1.5579999999999998,
+          "sides": 10
+        },
+        "material": "folha",
+        "position": [
+          0.0,
+          4.178,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_3",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.368,
+            0.0
+          ],
+          "radius": 0.95,
+          "sides": 10
+        },
+        "material": "folha",
+        "position": [
+          0.0,
+          4.938,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

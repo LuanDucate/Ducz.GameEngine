@@ -1,0 +1,476 @@
+{
+  "name": "Apartment block 4-floor 12x10",
+  "category": "Buildings",
+  "description": "Flat roof with parapet, water tank and window bands.",
+  "materials": {
+    "reboco_2": {
+      "albedo": "#c8b9a2",
+      "specular": 0.06,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    },
+    "vidro": {
+      "albedo": "#9fd0e8aa",
+      "transparent": true,
+      "specular": 0.9,
+      "shininess": 128
+    },
+    "concreto": {
+      "albedo": "#9a9691",
+      "specular": 0.08,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Apartment block 4-floor 12x10",
+    "children": [
+      {
+        "type": "static",
+        "name": "Estrutura",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.0,
+            12.8,
+            10.0
+          ]
+        },
+        "material": "reboco_2",
+        "position": [
+          0.0,
+          6.4,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_0_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          0.0,
+          1.9,
+          5.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_0_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          0.0,
+          1.9,
+          -5.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_0_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            8.8
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          6.03,
+          1.9,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_0_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            8.8
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          -6.03,
+          1.9,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_1_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          0.0,
+          5.1,
+          5.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_1_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          0.0,
+          5.1,
+          -5.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_1_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            8.8
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          6.03,
+          5.1,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_1_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            8.8
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          -6.03,
+          5.1,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_2_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          0.0,
+          8.3,
+          5.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_2_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          0.0,
+          8.3,
+          -5.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_2_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            8.8
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          6.03,
+          8.3,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_2_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            8.8
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          -6.03,
+          8.3,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_3_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          0.0,
+          11.5,
+          5.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_3_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          0.0,
+          11.5,
+          -5.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_3_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            8.8
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          6.03,
+          11.5,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_3_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            8.8
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          -6.03,
+          11.5,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Platibanda_N",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.0,
+            0.8,
+            0.3
+          ]
+        },
+        "material": "reboco_2",
+        "position": [
+          0.0,
+          13.2,
+          -4.85
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Platibanda_S",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.0,
+            0.8,
+            0.3
+          ]
+        },
+        "material": "reboco_2",
+        "position": [
+          0.0,
+          13.2,
+          4.85
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Platibanda_O",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.3,
+            0.8,
+            10.0
+          ]
+        },
+        "material": "reboco_2",
+        "position": [
+          -5.85,
+          13.2,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Platibanda_L",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.3,
+            0.8,
+            10.0
+          ]
+        },
+        "material": "reboco_2",
+        "position": [
+          5.85,
+          13.2,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Casa_Maquinas",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            3.0,
+            2.6,
+            3.0
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          -3.0,
+          14.1,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Caixa_Dagua",
+        "mesh": {
+          "primitive": "tube",
+          "size": [
+            0.0,
+            2.4,
+            0.2
+          ],
+          "radius": 1.0,
+          "segments": 16
+        },
+        "material": "concreto",
+        "position": [
+          3.0,
+          14.4,
+          2.5
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

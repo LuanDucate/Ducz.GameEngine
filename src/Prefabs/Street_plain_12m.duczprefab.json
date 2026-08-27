@@ -1,0 +1,141 @@
+{
+  "name": "Plain street 12 m",
+  "category": "Streets",
+  "description": "Same street without the centre line - for side roads.",
+  "materials": {
+    "asfalto": {
+      "albedo": "#3f4145",
+      "specular": 0.07,
+      "shininess": 12,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    },
+    "calcada": {
+      "albedo": "#a8a49b",
+      "specular": 0.05,
+      "checkerboard": {
+        "colorA": "#adaaa1",
+        "colorB": "#9d9a92",
+        "cells": 2
+      },
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    },
+    "meiofio": {
+      "albedo": "#8d8a84",
+      "specular": 0.06,
+      "texture": "Textures/prototype/grid_light.png",
+      "uvScale": [
+        1,
+        1
+      ]
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Plain street 12 m",
+    "children": [
+      {
+        "type": "static",
+        "name": "Asfalto",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            8.0,
+            0.3,
+            12.0
+          ]
+        },
+        "material": "asfalto",
+        "position": [
+          0.0,
+          0.05,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Calcada_O",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.0,
+            0.32,
+            12.0
+          ]
+        },
+        "material": "calcada",
+        "position": [
+          -5.0,
+          0.16,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "MeioFio_O",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.2,
+            0.36,
+            12.0
+          ]
+        },
+        "material": "meiofio",
+        "position": [
+          -4.0,
+          0.14,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Calcada_L",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.0,
+            0.32,
+            12.0
+          ]
+        },
+        "material": "calcada",
+        "position": [
+          5.0,
+          0.16,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "MeioFio_L",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.2,
+            0.36,
+            12.0
+          ]
+        },
+        "material": "meiofio",
+        "position": [
+          4.0,
+          0.14,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

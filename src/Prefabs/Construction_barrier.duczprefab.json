@@ -1,0 +1,104 @@
+{
+  "name": "Construction barrier",
+  "category": "Urban",
+  "description": "Roadwork barrier - handy for closing a street.",
+  "materials": {
+    "toldo": {
+      "albedo": "#b4433f",
+      "specular": 0.05
+    },
+    "letreiro": {
+      "albedo": "#f0efe6",
+      "emission": "#f0efe6",
+      "emissionEnergy": 0.8,
+      "unshaded": true
+    },
+    "metal_escuro": {
+      "albedo": "#40454a",
+      "specular": 0.5,
+      "shininess": 48
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Construction barrier",
+    "children": [
+      {
+        "type": "static",
+        "name": "Barra_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.4,
+            0.25,
+            0.1
+          ]
+        },
+        "material": "toldo",
+        "position": [
+          0.0,
+          0.9,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Barra_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.4,
+            0.25,
+            0.1
+          ]
+        },
+        "material": "letreiro",
+        "position": [
+          0.0,
+          0.6,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Pe_O",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.1,
+            0.7,
+            0.6
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          -1.0,
+          0.35,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Pe_L",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.1,
+            0.7,
+            0.6
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          1.0,
+          0.35,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

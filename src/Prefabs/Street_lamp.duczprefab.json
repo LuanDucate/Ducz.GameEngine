@@ -1,0 +1,98 @@
+{
+  "name": "Street lamp",
+  "category": "Urban",
+  "description": "Street lamp with a real light - place along the pavement.",
+  "materials": {
+    "metal_escuro": {
+      "albedo": "#40454a",
+      "specular": 0.5,
+      "shininess": 48
+    },
+    "luz_quente": {
+      "albedo": "#ffe6b0",
+      "emission": "#ffdba0",
+      "emissionEnergy": 2.2,
+      "unshaded": true
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Street lamp",
+    "children": [
+      {
+        "type": "static",
+        "name": "Poste",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            4.8,
+            0.0
+          ],
+          "radius": 0.12,
+          "sides": 8
+        },
+        "material": "metal_escuro",
+        "position": [
+          0.0,
+          2.4,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Braco",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.2,
+            0.12,
+            0.12
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          0.6,
+          4.75,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Luminaria",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.5,
+            0.2,
+            0.3
+          ]
+        },
+        "material": "luz_quente",
+        "position": [
+          1.15,
+          4.6,
+          0.0
+        ],
+        "worldUv": true,
+        "collider": {
+          "shape": "none"
+        }
+      },
+      {
+        "type": "pointLight",
+        "name": "Luz",
+        "position": [
+          1.15,
+          4.4,
+          0.0
+        ],
+        "color": "#ffdba0",
+        "energy": 2.6,
+        "range": 14
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "Wall 8 m",
+  "category": "Structures",
+  "description": "Wall with a coping, 2.2 m tall.",
+  "materials": {
+    "reboco": {
+      "albedo": "#d8cfbe",
+      "specular": 0.06,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    },
+    "concreto": {
+      "albedo": "#9a9691",
+      "specular": 0.08,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Wall 8 m",
+    "children": [
+      {
+        "type": "static",
+        "name": "Muro",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            8.0,
+            2.2,
+            0.3
+          ]
+        },
+        "material": "reboco",
+        "position": [
+          0.0,
+          1.1,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Cobertura",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            8.2,
+            0.16,
+            0.44
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          2.28,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Bush",
+  "category": "Nature",
+  "description": "Low bush for gardens and borders.",
+  "materials": {
+    "folha": {
+      "albedo": "#4a7a3a",
+      "specular": 0.05
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Bush",
+    "children": [
+      {
+        "type": "static",
+        "name": "Arbusto",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.1,
+            0.0
+          ],
+          "radius": 0.9,
+          "sides": 8
+        },
+        "material": "folha",
+        "position": [
+          0.0,
+          0.55,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

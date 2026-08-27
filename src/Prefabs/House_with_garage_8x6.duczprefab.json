@@ -1,0 +1,350 @@
+{
+  "name": "House with garage 8x6",
+  "category": "Houses",
+  "description": "One floor plus an open garage on the side.",
+  "materials": {
+    "concreto": {
+      "albedo": "#9a9691",
+      "specular": 0.08,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    },
+    "reboco": {
+      "albedo": "#d8cfbe",
+      "specular": 0.06,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    },
+    "porta": {
+      "albedo": "#59422c",
+      "specular": 0.2,
+      "shininess": 24
+    },
+    "vidro": {
+      "albedo": "#9fd0e8aa",
+      "transparent": true,
+      "specular": 0.9,
+      "shininess": 128
+    },
+    "telha_cinza": {
+      "albedo": "#585c60",
+      "specular": 0.14,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "House with garage 8x6",
+    "children": [
+      {
+        "type": "static",
+        "name": "Base",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            8.4,
+            0.3,
+            6.4
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          0.15,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Parede_N",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            8.0,
+            3.0,
+            0.25
+          ]
+        },
+        "material": "reboco",
+        "position": [
+          0.0,
+          1.8,
+          -3.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Parede_S",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            8.0,
+            3.0,
+            0.25
+          ]
+        },
+        "material": "reboco",
+        "position": [
+          0.0,
+          1.8,
+          3.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Parede_O",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.25,
+            3.0,
+            6.0
+          ]
+        },
+        "material": "reboco",
+        "position": [
+          -4.0,
+          1.8,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Parede_L",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.25,
+            3.0,
+            6.0
+          ]
+        },
+        "material": "reboco",
+        "position": [
+          4.0,
+          1.8,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Porta",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.0,
+            2.1,
+            0.1
+          ]
+        },
+        "material": "porta",
+        "position": [
+          0.0,
+          1.35,
+          3.02
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_S_0_-2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.1,
+            1.2,
+            0.08
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          -2.0,
+          1.9,
+          3.02
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_N_0_-2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.1,
+            1.2,
+            0.08
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          -2.0,
+          1.9,
+          -3.02
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_S_0_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.1,
+            1.2,
+            0.08
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          2.0,
+          1.9,
+          3.02
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_N_0_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.1,
+            1.2,
+            0.08
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          2.0,
+          1.9,
+          -3.02
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Janela_L_0",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.08,
+            1.2,
+            1.3
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          4.02,
+          1.9,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Telhado",
+        "mesh": {
+          "primitive": "roofGable",
+          "size": [
+            8.8,
+            2.2,
+            6.8
+          ],
+          "overhang": 0.45
+        },
+        "material": "telha_cinza",
+        "position": [
+          0.0,
+          4.4,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Garagem_Piso",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            4.0,
+            0.28,
+            5.0
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          6.0,
+          0.14,
+          1.5
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Garagem_Parede",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.2,
+            2.8,
+            5.0
+          ]
+        },
+        "material": "reboco",
+        "position": [
+          7.9,
+          1.7,
+          1.5
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Garagem_Telhado",
+        "mesh": {
+          "primitive": "roofShed",
+          "size": [
+            4.2,
+            0.6,
+            5.2
+          ],
+          "thickness": 0.18
+        },
+        "material": "telha_cinza",
+        "position": [
+          6.0,
+          3.1,
+          1.5
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "pointLight",
+        "name": "Luz_Interna",
+        "position": [
+          0.0,
+          2.7,
+          0.0
+        ],
+        "color": "#ffdba0",
+        "energy": 1.0,
+        "range": 8
+      }
+    ]
+  }
+}

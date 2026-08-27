@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Ducz.GameEngine\Ducz.GameEngine.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!-- WinExe: no console window (on Windows); messages go to the log file in %AppData%/DuczEngine/logs -->
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>../Branding/ducz.ico</ApplicationIcon>
+    <AssemblyTitle>Ducz Map Builder</AssemblyTitle>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Branding assets (logo, window icon) copied next to the executable. -->
+    <Content Include="../Branding/ducz-logo.png;../Branding/ducz-icon.png;../Branding/ducz-icon-256.png;../Branding/ducz-icon-64.png" Link="Branding/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

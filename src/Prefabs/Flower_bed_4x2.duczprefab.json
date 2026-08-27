@@ -1,0 +1,165 @@
+{
+  "name": "Flower bed 4x2",
+  "category": "Nature",
+  "description": "Raised planter with a small tree.",
+  "materials": {
+    "concreto": {
+      "albedo": "#9a9691",
+      "specular": 0.08,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    },
+    "terra": {
+      "albedo": "#7d6448",
+      "specular": 0.03,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    },
+    "tronco": {
+      "albedo": "#5b4632",
+      "specular": 0.05,
+      "uvScale": [
+        1,
+        1
+      ]
+    },
+    "folha": {
+      "albedo": "#4a7a3a",
+      "specular": 0.05
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Flower bed 4x2",
+    "children": [
+      {
+        "type": "static",
+        "name": "Borda",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            4.0,
+            0.5,
+            2.0
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          0.25,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Terra",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            3.6,
+            0.16,
+            1.6
+          ]
+        },
+        "material": "terra",
+        "position": [
+          0.0,
+          0.52,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Tronco",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            2.2,
+            0.0
+          ],
+          "radius": 0.22,
+          "sides": 8
+        },
+        "material": "tronco",
+        "position": [
+          0.0,
+          1.1,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_1",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.144,
+            0.0
+          ],
+          "radius": 1.3,
+          "sides": 10
+        },
+        "material": "folha",
+        "position": [
+          0.0,
+          2.395,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_2",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.04,
+            0.0
+          ],
+          "radius": 1.066,
+          "sides": 10
+        },
+        "material": "folha",
+        "position": [
+          0.0,
+          3.006,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_3",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            0.936,
+            0.0
+          ],
+          "radius": 0.65,
+          "sides": 10
+        },
+        "material": "folha",
+        "position": [
+          0.0,
+          3.526,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Ramp 1.5 m",
+  "category": "Structures",
+  "description": "Gentle ramp, rises toward +Z (R to turn).",
+  "materials": {
+    "concreto": {
+      "albedo": "#9a9691",
+      "specular": 0.08,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Ramp 1.5 m",
+    "children": [
+      {
+        "type": "static",
+        "name": "Rampa",
+        "mesh": {
+          "primitive": "wedge",
+          "size": [
+            3.0,
+            1.5,
+            8.0
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          0.75,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

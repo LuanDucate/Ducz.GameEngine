@@ -1,0 +1,123 @@
+{
+  "name": "Bridge 12 m",
+  "category": "Structures",
+  "description": "Stone bridge with arches and railings.",
+  "materials": {
+    "concreto": {
+      "albedo": "#9a9691",
+      "specular": 0.08,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Bridge 12 m",
+    "children": [
+      {
+        "type": "static",
+        "name": "Tabuleiro",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.0,
+            0.5,
+            6.0
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          1.4,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Arco_O",
+        "mesh": {
+          "primitive": "arch",
+          "size": [
+            5.0,
+            2.8,
+            6.2
+          ],
+          "openingWidth": 3.4,
+          "openingHeight": 0.8,
+          "segments": 14
+        },
+        "material": "concreto",
+        "position": [
+          -3.0,
+          1.05,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Arco_L",
+        "mesh": {
+          "primitive": "arch",
+          "size": [
+            5.0,
+            2.8,
+            6.2
+          ],
+          "openingWidth": 3.4,
+          "openingHeight": 0.8,
+          "segments": 14
+        },
+        "material": "concreto",
+        "position": [
+          3.0,
+          1.05,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Guarda_N",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.0,
+            0.6,
+            0.25
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          1.95,
+          -2.8
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Guarda_S",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.0,
+            0.6,
+            0.25
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          1.95,
+          2.8
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

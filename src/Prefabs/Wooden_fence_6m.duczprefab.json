@@ -1,0 +1,270 @@
+{
+  "name": "Wooden fence 6 m",
+  "category": "Structures",
+  "description": "Picket fence for gardens and fields.",
+  "materials": {
+    "madeira": {
+      "albedo": "#6d4c31",
+      "specular": 0.12,
+      "shininess": 16,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Wooden fence 6 m",
+    "children": [
+      {
+        "type": "static",
+        "name": "Trave_Alta",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            6.0,
+            0.12,
+            0.08
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          0.0,
+          1.05,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Trave_Baixa",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            6.0,
+            0.12,
+            0.08
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          0.0,
+          0.55,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Estaca_0",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.1,
+            1.4,
+            0.1
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          -2.75,
+          0.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Estaca_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.1,
+            1.4,
+            0.1
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          -2.2,
+          0.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Estaca_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.1,
+            1.4,
+            0.1
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          -1.65,
+          0.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Estaca_3",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.1,
+            1.4,
+            0.1
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          -1.1,
+          0.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Estaca_4",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.1,
+            1.4,
+            0.1
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          -0.55,
+          0.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Estaca_5",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.1,
+            1.4,
+            0.1
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          0.0,
+          0.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Estaca_6",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.1,
+            1.4,
+            0.1
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          0.55,
+          0.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Estaca_7",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.1,
+            1.4,
+            0.1
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          1.1,
+          0.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Estaca_8",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.1,
+            1.4,
+            0.1
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          1.65,
+          0.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Estaca_9",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.1,
+            1.4,
+            0.1
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          2.2,
+          0.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Estaca_10",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.1,
+            1.4,
+            0.1
+          ]
+        },
+        "material": "madeira",
+        "position": [
+          2.75,
+          0.7,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

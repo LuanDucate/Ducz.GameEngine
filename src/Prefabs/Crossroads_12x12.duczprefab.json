@@ -1,0 +1,400 @@
+{
+  "name": "Crossroads 12x12",
+  "category": "Streets",
+  "description": "Four-way junction with zebra crossings; matches the 12 m street.",
+  "materials": {
+    "asfalto": {
+      "albedo": "#3f4145",
+      "specular": 0.07,
+      "shininess": 12,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    },
+    "calcada": {
+      "albedo": "#a8a49b",
+      "specular": 0.05,
+      "checkerboard": {
+        "colorA": "#adaaa1",
+        "colorB": "#9d9a92",
+        "cells": 2
+      },
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    },
+    "faixa": {
+      "albedo": "#d9d5c2",
+      "specular": 0.05
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Crossroads 12x12",
+    "children": [
+      {
+        "type": "static",
+        "name": "Asfalto",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.0,
+            0.3,
+            12.0
+          ]
+        },
+        "material": "asfalto",
+        "position": [
+          0.0,
+          0.05,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Calcada_-5_-5",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.0,
+            0.32,
+            2.0
+          ]
+        },
+        "material": "calcada",
+        "position": [
+          -5.0,
+          0.16,
+          -5.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Calcada_5_-5",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.0,
+            0.32,
+            2.0
+          ]
+        },
+        "material": "calcada",
+        "position": [
+          5.0,
+          0.16,
+          -5.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Calcada_-5_5",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.0,
+            0.32,
+            2.0
+          ]
+        },
+        "material": "calcada",
+        "position": [
+          -5.0,
+          0.16,
+          5.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Calcada_5_5",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.0,
+            0.32,
+            2.0
+          ]
+        },
+        "material": "calcada",
+        "position": [
+          5.0,
+          0.16,
+          5.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaP_0_0",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.5,
+            0.02,
+            2.4
+          ]
+        },
+        "material": "faixa",
+        "position": [
+          -1.6,
+          0.21,
+          5.2
+        ],
+        "worldUv": true,
+        "collider": {
+          "shape": "none"
+        }
+      },
+      {
+        "type": "static",
+        "name": "FaixaP_0_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.5,
+            0.02,
+            2.4
+          ]
+        },
+        "material": "faixa",
+        "position": [
+          0.0,
+          0.21,
+          5.2
+        ],
+        "worldUv": true,
+        "collider": {
+          "shape": "none"
+        }
+      },
+      {
+        "type": "static",
+        "name": "FaixaP_0_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.5,
+            0.02,
+            2.4
+          ]
+        },
+        "material": "faixa",
+        "position": [
+          1.6,
+          0.21,
+          5.2
+        ],
+        "worldUv": true,
+        "collider": {
+          "shape": "none"
+        }
+      },
+      {
+        "type": "static",
+        "name": "FaixaP_1_0",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.4,
+            0.02,
+            0.5
+          ]
+        },
+        "material": "faixa",
+        "position": [
+          5.2,
+          0.21,
+          -1.6
+        ],
+        "worldUv": true,
+        "collider": {
+          "shape": "none"
+        }
+      },
+      {
+        "type": "static",
+        "name": "FaixaP_1_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.4,
+            0.02,
+            0.5
+          ]
+        },
+        "material": "faixa",
+        "position": [
+          5.2,
+          0.21,
+          0.0
+        ],
+        "worldUv": true,
+        "collider": {
+          "shape": "none"
+        }
+      },
+      {
+        "type": "static",
+        "name": "FaixaP_1_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.4,
+            0.02,
+            0.5
+          ]
+        },
+        "material": "faixa",
+        "position": [
+          5.2,
+          0.21,
+          1.6
+        ],
+        "worldUv": true,
+        "collider": {
+          "shape": "none"
+        }
+      },
+      {
+        "type": "static",
+        "name": "FaixaP_2_0",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.5,
+            0.02,
+            2.4
+          ]
+        },
+        "material": "faixa",
+        "position": [
+          -1.6,
+          0.21,
+          -5.2
+        ],
+        "worldUv": true,
+        "collider": {
+          "shape": "none"
+        }
+      },
+      {
+        "type": "static",
+        "name": "FaixaP_2_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.5,
+            0.02,
+            2.4
+          ]
+        },
+        "material": "faixa",
+        "position": [
+          0.0,
+          0.21,
+          -5.2
+        ],
+        "worldUv": true,
+        "collider": {
+          "shape": "none"
+        }
+      },
+      {
+        "type": "static",
+        "name": "FaixaP_2_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.5,
+            0.02,
+            2.4
+          ]
+        },
+        "material": "faixa",
+        "position": [
+          1.6,
+          0.21,
+          -5.2
+        ],
+        "worldUv": true,
+        "collider": {
+          "shape": "none"
+        }
+      },
+      {
+        "type": "static",
+        "name": "FaixaP_3_0",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.4,
+            0.02,
+            0.5
+          ]
+        },
+        "material": "faixa",
+        "position": [
+          -5.2,
+          0.21,
+          -1.6
+        ],
+        "worldUv": true,
+        "collider": {
+          "shape": "none"
+        }
+      },
+      {
+        "type": "static",
+        "name": "FaixaP_3_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.4,
+            0.02,
+            0.5
+          ]
+        },
+        "material": "faixa",
+        "position": [
+          -5.2,
+          0.21,
+          0.0
+        ],
+        "worldUv": true,
+        "collider": {
+          "shape": "none"
+        }
+      },
+      {
+        "type": "static",
+        "name": "FaixaP_3_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.4,
+            0.02,
+            0.5
+          ]
+        },
+        "material": "faixa",
+        "position": [
+          -5.2,
+          0.21,
+          1.6
+        ],
+        "worldUv": true,
+        "collider": {
+          "shape": "none"
+        }
+      }
+    ]
+  }
+}

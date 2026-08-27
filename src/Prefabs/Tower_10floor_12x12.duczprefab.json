@@ -1,0 +1,923 @@
+{
+  "name": "Tower 10-floor 12x12",
+  "category": "Buildings",
+  "description": "Tall block for a city centre.",
+  "materials": {
+    "concreto": {
+      "albedo": "#9a9691",
+      "specular": 0.08,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    },
+    "vidro_esc": {
+      "albedo": "#2c4a5acc",
+      "transparent": true,
+      "specular": 0.9,
+      "shininess": 128
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Tower 10-floor 12x12",
+    "children": [
+      {
+        "type": "static",
+        "name": "Estrutura",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.0,
+            32.0,
+            12.0
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          16.0,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_0_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          1.9,
+          6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_0_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          1.9,
+          -6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_0_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          6.03,
+          1.9,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_0_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          -6.03,
+          1.9,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_1_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          5.1,
+          6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_1_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          5.1,
+          -6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_1_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          6.03,
+          5.1,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_1_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          -6.03,
+          5.1,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_2_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          8.3,
+          6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_2_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          8.3,
+          -6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_2_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          6.03,
+          8.3,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_2_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          -6.03,
+          8.3,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_3_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          11.5,
+          6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_3_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          11.5,
+          -6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_3_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          6.03,
+          11.5,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_3_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          -6.03,
+          11.5,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_4_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          14.7,
+          6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_4_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          14.7,
+          -6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_4_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          6.03,
+          14.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_4_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          -6.03,
+          14.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_5_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          17.9,
+          6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_5_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          17.9,
+          -6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_5_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          6.03,
+          17.9,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_5_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          -6.03,
+          17.9,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_6_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          21.1,
+          6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_6_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          21.1,
+          -6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_6_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          6.03,
+          21.1,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_6_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          -6.03,
+          21.1,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_7_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          24.3,
+          6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_7_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          24.3,
+          -6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_7_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          6.03,
+          24.3,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_7_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          -6.03,
+          24.3,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_8_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          27.5,
+          6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_8_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          27.5,
+          -6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_8_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          6.03,
+          27.5,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_8_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          -6.03,
+          27.5,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_9_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          30.7,
+          6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_9_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            10.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          0.0,
+          30.7,
+          -6.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_9_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          6.03,
+          30.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_9_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            10.8
+          ]
+        },
+        "material": "vidro_esc",
+        "position": [
+          -6.03,
+          30.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Platibanda_N",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.0,
+            0.8,
+            0.3
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          32.4,
+          -5.85
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Platibanda_S",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.0,
+            0.8,
+            0.3
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          32.4,
+          5.85
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Platibanda_O",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.3,
+            0.8,
+            12.0
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          -5.85,
+          32.4,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Platibanda_L",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.3,
+            0.8,
+            12.0
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          5.85,
+          32.4,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Casa_Maquinas",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            3.0,
+            2.6,
+            3.0
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          -3.0,
+          33.3,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Caixa_Dagua",
+        "mesh": {
+          "primitive": "tube",
+          "size": [
+            0.0,
+            2.4,
+            0.2
+          ],
+          "radius": 1.0,
+          "segments": 16
+        },
+        "material": "concreto",
+        "position": [
+          3.0,
+          33.6,
+          3.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "name": "Wall with gate 8 m",
+  "category": "Structures",
+  "description": "Wall with a metal gate in the middle.",
+  "materials": {
+    "reboco": {
+      "albedo": "#d8cfbe",
+      "specular": 0.06,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    },
+    "concreto": {
+      "albedo": "#9a9691",
+      "specular": 0.08,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    },
+    "metal_escuro": {
+      "albedo": "#40454a",
+      "specular": 0.5,
+      "shininess": 48
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Wall with gate 8 m",
+    "children": [
+      {
+        "type": "static",
+        "name": "Muro_O",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.5,
+            2.2,
+            0.3
+          ]
+        },
+        "material": "reboco",
+        "position": [
+          -2.75,
+          1.1,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Muro_L",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.5,
+            2.2,
+            0.3
+          ]
+        },
+        "material": "reboco",
+        "position": [
+          2.75,
+          1.1,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Pilar_O",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.35,
+            2.5,
+            0.45
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          -1.4,
+          1.25,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Pilar_L",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.35,
+            2.5,
+            0.45
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          1.4,
+          1.25,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Portao",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.5,
+            2.0,
+            0.1
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

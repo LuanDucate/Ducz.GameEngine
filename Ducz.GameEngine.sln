@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.9.12105.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{05C2E4F2-1FEF-4EF0-B222-421C3B4AE863}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ducz.GameEngine", "src\Ducz.GameEngine\Ducz.GameEngine.csproj", "{3C6600A4-7685-433F-8913-848F1D6710D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ducz.Tools.Launcher", "src\Ducz.Tools.Launcher\Ducz.Tools.Launcher.csproj", "{A02B095F-9F14-C1CE-EE10-033A84B7BB9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ducz.Tools.SceneEditor", "src\Ducz.Tools.SceneEditor\Ducz.Tools.SceneEditor.csproj", "{C0DA6BD8-B0DB-E7C3-33B9-7BC06D4EB60F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C6600A4-7685-433F-8913-848F1D6710D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6600A4-7685-433F-8913-848F1D6710D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6600A4-7685-433F-8913-848F1D6710D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6600A4-7685-433F-8913-848F1D6710D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A02B095F-9F14-C1CE-EE10-033A84B7BB9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A02B095F-9F14-C1CE-EE10-033A84B7BB9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A02B095F-9F14-C1CE-EE10-033A84B7BB9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A02B095F-9F14-C1CE-EE10-033A84B7BB9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0DA6BD8-B0DB-E7C3-33B9-7BC06D4EB60F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0DA6BD8-B0DB-E7C3-33B9-7BC06D4EB60F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0DA6BD8-B0DB-E7C3-33B9-7BC06D4EB60F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0DA6BD8-B0DB-E7C3-33B9-7BC06D4EB60F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C6600A4-7685-433F-8913-848F1D6710D4} = {05C2E4F2-1FEF-4EF0-B222-421C3B4AE863}
+		{A02B095F-9F14-C1CE-EE10-033A84B7BB9C} = {05C2E4F2-1FEF-4EF0-B222-421C3B4AE863}
+		{C0DA6BD8-B0DB-E7C3-33B9-7BC06D4EB60F} = {05C2E4F2-1FEF-4EF0-B222-421C3B4AE863}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38224555-4087-43BF-9002-373C61DC5175}
+	EndGlobalSection
+EndGlobal

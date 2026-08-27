@@ -1,0 +1,113 @@
+{
+  "name": "Street corner 12x12",
+  "category": "Streets",
+  "description": "90 degree corner. Rotate with R to face the other way.",
+  "materials": {
+    "asfalto": {
+      "albedo": "#3f4145",
+      "specular": 0.07,
+      "shininess": 12,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    },
+    "calcada": {
+      "albedo": "#a8a49b",
+      "specular": 0.05,
+      "checkerboard": {
+        "colorA": "#adaaa1",
+        "colorB": "#9d9a92",
+        "cells": 2
+      },
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Street corner 12x12",
+    "children": [
+      {
+        "type": "static",
+        "name": "Asfalto",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.0,
+            0.3,
+            12.0
+          ]
+        },
+        "material": "asfalto",
+        "position": [
+          0.0,
+          0.05,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Calcada_Externa_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.0,
+            0.32,
+            12.0
+          ]
+        },
+        "material": "calcada",
+        "position": [
+          -5.0,
+          0.16,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Calcada_Externa_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.0,
+            0.32,
+            2.0
+          ]
+        },
+        "material": "calcada",
+        "position": [
+          0.0,
+          0.16,
+          -5.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Calcada_Interna",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            2.0,
+            0.32,
+            2.0
+          ]
+        },
+        "material": "calcada",
+        "position": [
+          5.0,
+          0.16,
+          5.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "name": "Tree cluster",
+  "category": "Nature",
+  "description": "Three trees at once, for filling a park quickly.",
+  "materials": {
+    "tronco": {
+      "albedo": "#5b4632",
+      "specular": 0.05,
+      "uvScale": [
+        1,
+        1
+      ]
+    },
+    "folha": {
+      "albedo": "#4a7a3a",
+      "specular": 0.05
+    },
+    "folha_2": {
+      "albedo": "#5c8c42",
+      "specular": 0.05
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Tree cluster",
+    "children": [
+      {
+        "type": "static",
+        "name": "Tronco_1",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            3.2,
+            0.0
+          ],
+          "radius": 0.22,
+          "sides": 8
+        },
+        "material": "tronco",
+        "position": [
+          0.0,
+          1.6,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_1_1",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.76,
+            0.0
+          ],
+          "radius": 2.0,
+          "sides": 10
+        },
+        "material": "folha",
+        "position": [
+          0.0,
+          3.5,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_1_2",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.6,
+            0.0
+          ],
+          "radius": 1.64,
+          "sides": 10
+        },
+        "material": "folha",
+        "position": [
+          0.0,
+          4.44,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_1_3",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.44,
+            0.0
+          ],
+          "radius": 1.0,
+          "sides": 10
+        },
+        "material": "folha",
+        "position": [
+          0.0,
+          5.24,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Tronco_2",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            2.6,
+            0.0
+          ],
+          "radius": 0.22,
+          "sides": 8
+        },
+        "material": "tronco",
+        "position": [
+          2.6,
+          1.3,
+          1.8
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_2_1",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.408,
+            0.0
+          ],
+          "radius": 1.6,
+          "sides": 10
+        },
+        "material": "folha_2",
+        "position": [
+          2.6,
+          2.84,
+          1.8
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_2_2",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.28,
+            0.0
+          ],
+          "radius": 1.312,
+          "sides": 10
+        },
+        "material": "folha_2",
+        "position": [
+          2.6,
+          3.592,
+          1.8
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_2_3",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.152,
+            0.0
+          ],
+          "radius": 0.8,
+          "sides": 10
+        },
+        "material": "folha_2",
+        "position": [
+          2.6,
+          4.232,
+          1.8
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Tronco_3",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            3.6,
+            0.0
+          ],
+          "radius": 0.22,
+          "sides": 8
+        },
+        "material": "tronco",
+        "position": [
+          -2.2,
+          1.8,
+          2.2
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_3_1",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.936,
+            0.0
+          ],
+          "radius": 2.2,
+          "sides": 10
+        },
+        "material": "folha",
+        "position": [
+          -2.2,
+          3.93,
+          2.2
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_3_2",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.76,
+            0.0
+          ],
+          "radius": 1.804,
+          "sides": 10
+        },
+        "material": "folha",
+        "position": [
+          -2.2,
+          4.964,
+          2.2
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Copa_3_3",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            1.584,
+            0.0
+          ],
+          "radius": 1.1,
+          "sides": 10
+        },
+        "material": "folha",
+        "position": [
+          -2.2,
+          5.844,
+          2.2
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "Trash can",
+  "category": "Urban",
+  "description": "Street bin.",
+  "materials": {
+    "metal_escuro": {
+      "albedo": "#40454a",
+      "specular": 0.5,
+      "shininess": 48
+    },
+    "metal": {
+      "albedo": "#8b9096",
+      "specular": 0.6,
+      "shininess": 64
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Trash can",
+    "children": [
+      {
+        "type": "static",
+        "name": "Corpo",
+        "mesh": {
+          "primitive": "tube",
+          "size": [
+            0.0,
+            0.9,
+            0.06
+          ],
+          "radius": 0.3,
+          "segments": 12
+        },
+        "material": "metal_escuro",
+        "position": [
+          0.0,
+          0.45,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Tampa",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.7,
+            0.1,
+            0.7
+          ]
+        },
+        "material": "metal",
+        "position": [
+          0.0,
+          0.95,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

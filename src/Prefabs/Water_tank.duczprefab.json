@@ -1,0 +1,150 @@
+{
+  "name": "Water tank",
+  "category": "Urban",
+  "description": "Water tank on legs - very common on Brazilian roofs.",
+  "materials": {
+    "concreto": {
+      "albedo": "#9a9691",
+      "specular": 0.08,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    },
+    "metal": {
+      "albedo": "#8b9096",
+      "specular": 0.6,
+      "shininess": 64
+    },
+    "metal_escuro": {
+      "albedo": "#40454a",
+      "specular": 0.5,
+      "shininess": 48
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Water tank",
+    "children": [
+      {
+        "type": "static",
+        "name": "Tanque",
+        "mesh": {
+          "primitive": "tube",
+          "size": [
+            0.0,
+            2.0,
+            0.2
+          ],
+          "radius": 1.2,
+          "segments": 16
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          2.6,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Tampa",
+        "mesh": {
+          "primitive": "prism",
+          "size": [
+            0.0,
+            0.2,
+            0.0
+          ],
+          "radius": 1.25,
+          "sides": 16
+        },
+        "material": "metal",
+        "position": [
+          0.0,
+          3.7,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Pe_0",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.14,
+            1.6,
+            0.14
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          0.8,
+          0.8,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Pe_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.14,
+            1.6,
+            0.14
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          0.0,
+          0.8,
+          0.8
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Pe_2",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.14,
+            1.6,
+            0.14
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          -0.8,
+          0.8,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Pe_3",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.14,
+            1.6,
+            0.14
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          -0.0,
+          0.8,
+          -0.8
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

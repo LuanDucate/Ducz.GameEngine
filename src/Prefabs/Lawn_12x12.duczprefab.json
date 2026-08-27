@@ -1,0 +1,41 @@
+{
+  "name": "Lawn 12x12",
+  "category": "Nature",
+  "description": "Grass patch to break up the asphalt.",
+  "materials": {
+    "grama": {
+      "albedo": "#6d8a4a",
+      "specular": 0.03,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Lawn 12x12",
+    "children": [
+      {
+        "type": "static",
+        "name": "Gramado",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.0,
+            0.2,
+            12.0
+          ]
+        },
+        "material": "grama",
+        "position": [
+          0.0,
+          0.1,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

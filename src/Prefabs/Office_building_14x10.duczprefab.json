@@ -1,0 +1,419 @@
+{
+  "name": "Office building 14x10",
+  "category": "Buildings",
+  "description": "Shopfront with awning and sign on the ground floor.",
+  "materials": {
+    "reboco_3": {
+      "albedo": "#b9c4c6",
+      "specular": 0.06,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    },
+    "vidro": {
+      "albedo": "#9fd0e8aa",
+      "transparent": true,
+      "specular": 0.9,
+      "shininess": 128
+    },
+    "metal_escuro": {
+      "albedo": "#40454a",
+      "specular": 0.5,
+      "shininess": 48
+    },
+    "toldo": {
+      "albedo": "#b4433f",
+      "specular": 0.05
+    },
+    "letreiro": {
+      "albedo": "#f0efe6",
+      "emission": "#f0efe6",
+      "emissionEnergy": 0.8,
+      "unshaded": true
+    },
+    "concreto": {
+      "albedo": "#9a9691",
+      "specular": 0.08,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Office building 14x10",
+    "children": [
+      {
+        "type": "static",
+        "name": "Estrutura",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            14.0,
+            9.6,
+            10.0
+          ]
+        },
+        "material": "reboco_3",
+        "position": [
+          0.0,
+          4.8,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_1_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          0.0,
+          5.1,
+          5.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_1_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          0.0,
+          5.1,
+          -5.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_1_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            8.8
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          7.03,
+          5.1,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_1_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            8.8
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          -7.03,
+          5.1,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_2_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          0.0,
+          8.3,
+          5.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Faixa_2_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.8,
+            1.5,
+            0.06
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          0.0,
+          8.3,
+          -5.03
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_2_1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            8.8
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          7.03,
+          8.3,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "FaixaL_2_-1",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.06,
+            1.5,
+            8.8
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          -7.03,
+          8.3,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Vitrine",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            13.0,
+            2.6,
+            0.08
+          ]
+        },
+        "material": "vidro",
+        "position": [
+          0.0,
+          1.6,
+          5.04
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Porta_Loja",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            1.6,
+            2.3,
+            0.08
+          ]
+        },
+        "material": "metal_escuro",
+        "position": [
+          0.0,
+          1.15,
+          5.09
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Toldo",
+        "mesh": {
+          "primitive": "roofShed",
+          "size": [
+            13.4,
+            0.5,
+            1.8
+          ],
+          "thickness": 0.12
+        },
+        "material": "toldo",
+        "position": [
+          0.0,
+          3.3,
+          5.9
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Letreiro",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            12.0,
+            0.7,
+            0.1
+          ]
+        },
+        "material": "letreiro",
+        "position": [
+          0.0,
+          3.9,
+          5.1
+        ],
+        "worldUv": true,
+        "collider": {
+          "shape": "none"
+        }
+      },
+      {
+        "type": "static",
+        "name": "Platibanda_N",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            14.0,
+            0.8,
+            0.3
+          ]
+        },
+        "material": "reboco_3",
+        "position": [
+          0.0,
+          10.0,
+          -4.85
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Platibanda_S",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            14.0,
+            0.8,
+            0.3
+          ]
+        },
+        "material": "reboco_3",
+        "position": [
+          0.0,
+          10.0,
+          4.85
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Platibanda_O",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.3,
+            0.8,
+            10.0
+          ]
+        },
+        "material": "reboco_3",
+        "position": [
+          -6.85,
+          10.0,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Platibanda_L",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            0.3,
+            0.8,
+            10.0
+          ]
+        },
+        "material": "reboco_3",
+        "position": [
+          6.85,
+          10.0,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Casa_Maquinas",
+        "mesh": {
+          "primitive": "box",
+          "size": [
+            3.0,
+            2.6,
+            3.0
+          ]
+        },
+        "material": "concreto",
+        "position": [
+          -3.5,
+          10.9,
+          0.0
+        ],
+        "worldUv": true
+      },
+      {
+        "type": "static",
+        "name": "Caixa_Dagua",
+        "mesh": {
+          "primitive": "tube",
+          "size": [
+            0.0,
+            2.4,
+            0.2
+          ],
+          "radius": 1.0,
+          "segments": 16
+        },
+        "material": "concreto",
+        "position": [
+          3.5,
+          11.2,
+          2.5
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

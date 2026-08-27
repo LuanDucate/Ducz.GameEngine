@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ducz Map Builder - build simple 3D maps, export GLB</title>
+<meta name="description" content="A small, lightweight, open-source 3D map builder in C#. Block out levels on a grid, texture by right-click, export a .glb for Godot, Blender or any glTF viewer.">
+<meta property="og:title" content="Ducz Map Builder">
+<meta property="og:description" content="Build simple 3D maps fast, texture them with a right-click, export them as GLB.">
+<meta property="og:image" content="images/showcase.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/logo.png">
+<style>
+  :root{
+    --bg:#0e1014; --bg-2:#14171d; --card:#181c23; --card-2:#1e232c;
+    --line:#272c36; --text:#e7ebf0; --muted:#9aa4b2; --dim:#6b7482;
+    --orange:#f5a623; --orange-2:#ffb84d; --blue:#5a9dff; --blue-2:#4a6a9a;
+    --radius:14px; --max:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--blue); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 22px}
+  h1,h2,h3{line-height:1.2; margin:0}
+
+  /* nav */
+  nav{
+    position:sticky; top:0; z-index:20; backdrop-filter:blur(10px);
+    background:rgba(14,16,20,.82); border-bottom:1px solid var(--line);
+  }
+  .nav-in{display:flex; align-items:center; gap:14px; height:60px}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:700; color:var(--text)}
+  .brand img{width:30px; height:30px; border-radius:7px}
+  .nav-links{margin-left:auto; display:flex; align-items:center; gap:22px}
+  .nav-links a{color:var(--muted); font-size:.94rem}
+  .nav-links a:hover{color:var(--text); text-decoration:none}
+  .btn{
+    display:inline-block; padding:9px 18px; border-radius:9px; font-weight:600;
+    border:1px solid transparent; cursor:pointer; font-size:.94rem;
+  }
+  .btn-primary{background:var(--orange); color:#161616}
+  .btn-primary:hover{background:var(--orange-2); text-decoration:none}
+  .btn-ghost{border-color:var(--line); color:var(--text)}
+  .btn-ghost:hover{border-color:var(--dim); text-decoration:none}
+
+  /* hero */
+  header.hero{
+    padding:74px 0 40px; text-align:center;
+    background:radial-gradient(1100px 480px at 50% -8%, rgba(90,157,255,.14), transparent 60%),
+               radial-gradient(760px 380px at 80% 0%, rgba(245,166,35,.10), transparent 55%);
+  }
+  .hero h1{font-size:clamp(2.1rem,5vw,3.4rem); letter-spacing:-.02em}
+  .hero .tag{color:var(--orange); font-weight:600; letter-spacing:.02em; margin-bottom:14px}
+  .hero p.lead{max-width:640px; margin:18px auto 0; color:var(--muted); font-size:1.12rem}
+  .cta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:28px 0 10px}
+  .badges{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:20px}
+  .badge{font-size:.8rem; color:var(--dim); border:1px solid var(--line); border-radius:20px; padding:3px 12px}
+  .shot{
+    margin:40px auto 0; max-width:var(--max);
+    border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
+    box-shadow:0 30px 80px -30px rgba(0,0,0,.8);
+  }
+  .shot img{display:block; width:100%; height:auto}
+
+  section{padding:56px 0}
+  .eyebrow{color:var(--orange); font-weight:700; font-size:.82rem; letter-spacing:.12em; text-transform:uppercase}
+  .sec-head{text-align:center; margin-bottom:38px}
+  .sec-head h2{font-size:clamp(1.6rem,3.4vw,2.2rem); margin-top:8px}
+  .sec-head p{color:var(--muted); margin:12px auto 0; max-width:600px}
+
+  .grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:22px}
+  .card .ico{font-size:1.5rem; margin-bottom:10px}
+  .card h3{font-size:1.05rem; margin-bottom:6px}
+  .card p{margin:0; color:var(--muted); font-size:.94rem}
+
+  /* workflow */
+  .flow{display:grid; gap:18px; grid-template-columns:repeat(2,1fr)}
+  .flow figure{margin:0; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
+  .flow img{display:block; width:100%; height:auto; border-bottom:1px solid var(--line)}
+  .flow figcaption{padding:14px 16px}
+  .flow .step{color:var(--orange); font-weight:700; font-size:.8rem; letter-spacing:.06em}
+  .flow figcaption p{margin:4px 0 0; color:var(--muted); font-size:.92rem}
+
+  /* story */
+  .story{background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+  .story blockquote{
+    max-width:760px; margin:0 auto; font-size:1.25rem; line-height:1.6; text-align:center;
+    color:var(--text); font-style:italic;
+  }
+  .story .sig{display:block; margin-top:18px; color:var(--dim); font-style:normal; font-size:.95rem}
+
+  /* docs */
+  .docs{display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .doc{display:flex; gap:12px; align-items:flex-start; background:var(--card); border:1px solid var(--line);
+       border-radius:12px; padding:16px 18px}
+  .doc:hover{border-color:var(--blue-2); text-decoration:none}
+  .doc .d-ico{font-size:1.2rem}
+  .doc b{display:block; color:var(--text)}
+  .doc span{color:var(--muted); font-size:.9rem}
+
+  footer{border-top:1px solid var(--line); padding:34px 0; color:var(--dim); font-size:.9rem}
+  .foot-in{display:flex; gap:14px; align-items:center; flex-wrap:wrap; justify-content:space-between}
+
+  @media(max-width:640px){
+    .flow{grid-template-columns:1fr}
+    .nav-links a:not(.btn){display:none}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><img src="images/logo.png" alt="Ducz"> Ducz Map Builder</a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#docs">Docs</a>
+      <a href="https://github.com/LuanDucate/Ducz.GameEngine">GitHub</a>
+      <a class="btn btn-primary" href="https://github.com/LuanDucate/Ducz.GameEngine/releases/latest">Download</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="tag">Free &amp; open source · MIT</div>
+    <h1>Build simple 3D maps, fast.</h1>
+    <p class="lead">
+      Block out a level on a grid, texture it with a right-click, walk through it, then export a
+      <code>.glb</code> that drops straight into <strong>Godot</strong>, <strong>Blender</strong>
+      or any glTF viewer. A small, lightweight map builder written in plain C#.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://github.com/LuanDucate/Ducz.GameEngine/releases/latest">Download the latest release</a>
+      <a class="btn btn-ghost" href="https://github.com/LuanDucate/Ducz.GameEngine">View on GitHub</a>
+    </div>
+    <div class="badges">
+      <span class="badge">.NET 8</span>
+      <span class="badge">OpenGL 3.3</span>
+      <span class="badge">Windows · Linux · macOS</span>
+      <span class="badge">GLB / glTF export</span>
+    </div>
+    <div class="shot">
+      <img src="images/showcase.png" alt="A small town being built in the Ducz Map Builder">
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Everything in the box</div>
+      <h2>A whole level-blockout toolkit</h2>
+      <p>No downloaded assets needed to start - every new map opens on a 1&nbsp;m grid palette.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="ico">🧱</div><h3>Grid building</h3><p>Blocks, walls, ramps, stairs, roofs, arches and more - each with an exact triangle collider. Snap, stack, drag-paint and rectangle-fill.</p></div>
+      <div class="card"><div class="ico">🎨</div><h3>Texture by right-click</h3><p>Drop an image onto any object to make a material. World-space UVs keep texture density on every block size. Normal &amp; roughness maps supported.</p></div>
+      <div class="card"><div class="ico">🎯</div><h3>Move gizmo</h3><p>Grab the X/Y/Z axis arrows and drag an object into place, snapping to the grid - the whole selection moves together.</p></div>
+      <div class="card"><div class="ico">🏠</div><h3>37 prefabs</h3><p>Houses, streets, blocks of flats, trees, lamp posts and benches that drop in assembled. Alt-click to edit any part; Ctrl+B to save your own.</p></div>
+      <div class="card"><div class="ico">🟢</div><h3>Reachability overlay</h3><p>Press F to flood-fill the walkable map from the spawn - green where you can walk, red where a platform is isolated. Multi-level maps that actually connect.</p></div>
+      <div class="card"><div class="ico">📦</div><h3>GLB export</h3><p>PBR materials with embedded textures, punctual lights, marker metadata and Godot <code>-col</code>/<code>-rigid</code> import suffixes.</p></div>
+      <div class="card"><div class="ico">🚶</div><h3>Play mode</h3><p>Press Tab and walk through your map on foot with the built-in third-person player.</p></div>
+      <div class="card"><div class="ico">💾</div><h3>Autosave &amp; JSON</h3><p>Your map is a small, readable JSON file that saves itself - diffable, hand-editable, version-control friendly.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="workflow" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">From blockout to engine</div>
+      <h2>Map to Godot / Blender in one key</h2>
+    </div>
+    <div class="flow">
+      <figure><img src="images/Launcher.png" alt="Launcher"><figcaption><span class="step">1 · START</span><p>The launcher creates or opens a map project from a template.</p></figcaption></figure>
+      <figure><img src="images/ez-to-import-models.png" alt="Importing models"><figcaption><span class="step">2 · IMPORT</span><p>Drag GLB / glTF / FBX / OBJ models onto the window and place them like blocks.</p></figcaption></figure>
+      <figure><img src="images/ez-to-export.png" alt="Exporting a GLB"><figcaption><span class="step">3 · EXPORT</span><p><code>Ctrl+E</code> writes a <code>.glb</code> of the whole map.</p></figcaption></figure>
+      <figure><img src="images/ez-to-import-on-blender.png" alt="The exported GLB open in Blender"><figcaption><span class="step">4 · OPEN ANYWHERE</span><p>The GLB in Blender, carrying <code>-col</code> collision for a one-drop Godot import.</p></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <blockquote>
+      “I spent a few months on this project with one goal: a simple, lightweight, customizable map
+      builder. I didn't want to let something this cool sit rotting in my local files - so I'm
+      releasing it for free, open to use and distribution. I hope it's useful to someone.”
+      <span class="sig">- why this is open source</span>
+    </blockquote>
+  </div>
+</section>
+
+<section id="docs">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Documentation</div>
+      <h2>Read the manual</h2>
+      <p>The full docs live in the repository and render on GitHub.</p>
+    </div>
+    <div class="docs">
+      <a class="doc" href="https://github.com/LuanDucate/Ducz.GameEngine/blob/main/docs/map-builder.md"><span class="d-ico">🗺️</span><span><b>Map Builder</b><span>Controls, blocks, textures, props, play mode</span></span></a>
+      <a class="doc" href="https://github.com/LuanDucate/Ducz.GameEngine/blob/main/docs/prefabs.md"><span class="d-ico">🏠</span><span><b>Prefabs</b><span>Ready-made pieces and how to make your own</span></span></a>
+      <a class="doc" href="https://github.com/LuanDucate/Ducz.GameEngine/blob/main/docs/glb-export.md"><span class="d-ico">📦</span><span><b>GLB Export</b><span>What goes in the file, Godot import hints</span></span></a>
+      <a class="doc" href="https://github.com/LuanDucate/Ducz.GameEngine/blob/main/docs/json-scenes.md"><span class="d-ico">📄</span><span><b>JSON Scenes</b><span>The scene file format the builder reads and writes</span></span></a>
+      <a class="doc" href="https://github.com/LuanDucate/Ducz.GameEngine/blob/main/docs/launcher.md"><span class="d-ico">🚀</span><span><b>Launcher &amp; Projects</b><span>Project manager, templates, folder format</span></span></a>
+      <a class="doc" href="https://github.com/LuanDucate/Ducz.GameEngine/blob/main/docs/Docs_for_IA/README.md"><span class="d-ico">🤖</span><span><b>Docs for AI</b><span>Teach an AI/RAG to generate maps from a prompt</span></span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>Ducz Map Builder - released under the <a href="https://github.com/LuanDucate/Ducz.GameEngine/blob/main/LICENSE">MIT license</a>.</span>
+    <span><a href="https://github.com/LuanDucate/Ducz.GameEngine">github.com/LuanDucate/Ducz.GameEngine</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

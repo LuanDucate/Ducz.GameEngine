@@ -1,0 +1,13 @@
+<Project>
+  <!-- Shared metadata for every project in the solution (shown in file properties and crash logs). -->
+  <PropertyGroup>
+    <Version>0.2.0</Version>
+    <Company>Ducz</Company>
+    <Product>Ducz Map Builder</Product>
+    <Authors>Ducz</Authors>
+    <Copyright>Copyright © 2026 Ducz</Copyright>
+    <NeutralLanguage>en</NeutralLanguage>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,42 @@
+{
+  "name": "Gable roof 10x8",
+  "category": "Structures",
+  "description": "Loose gable roof - drop it on your own walls.",
+  "materials": {
+    "telha": {
+      "albedo": "#8f4a35",
+      "specular": 0.12,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_light.png"
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Gable roof 10x8",
+    "children": [
+      {
+        "type": "static",
+        "name": "Telhado",
+        "mesh": {
+          "primitive": "roofGable",
+          "size": [
+            10.0,
+            2.6,
+            8.0
+          ],
+          "overhang": 0.5
+        },
+        "material": "telha",
+        "position": [
+          0.0,
+          1.3,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}

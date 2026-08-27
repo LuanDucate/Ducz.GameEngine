@@ -1,0 +1,42 @@
+{
+  "name": "Stairs 3 m",
+  "category": "Structures",
+  "description": "Straight flight, 3 m rise, 12 steps. Walkable.",
+  "materials": {
+    "concreto": {
+      "albedo": "#9a9691",
+      "specular": 0.08,
+      "uvScale": [
+        1,
+        1
+      ],
+      "texture": "Textures/prototype/grid_mid.png"
+    }
+  },
+  "node": {
+    "type": "node",
+    "name": "Stairs 3 m",
+    "children": [
+      {
+        "type": "static",
+        "name": "Escada",
+        "mesh": {
+          "primitive": "stairs",
+          "size": [
+            2.5,
+            3.0,
+            4.0
+          ],
+          "steps": 12
+        },
+        "material": "concreto",
+        "position": [
+          0.0,
+          1.5,
+          0.0
+        ],
+        "worldUv": true
+      }
+    ]
+  }
+}
